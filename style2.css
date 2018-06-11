@@ -1,0 +1,348 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Cantata One;
+  font-size: 23px;
+  overflow-x: hidden;
+}
+
+html {
+  background: url(img/header_smaller.jpg) no-repeat top center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+/* Navigation */
+#nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 2.5rem;
+}
+.name {
+  text-decoration: none;
+  color: white;
+}
+
+#nav-list {
+  list-style-type: none;
+  display: flex;
+}
+
+.nav-item {
+  margin: 0 0 0 2.5rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+}
+
+.nav-hover {
+  transition: text-shadow 0.2s ease-in-out;
+}
+
+.nav-hover:hover {
+  text-shadow: 5px 5px 20px #BCBCBC;
+}
+
+/* Mobile Nav */
+
+.nav-show, .nav-hide {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
+
+.nav-toggle {
+  border-width: 40px;
+  margin: 1rem;
+  text-decoration: none;
+  fill: white;
+}
+
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 7rem 2rem 7rem;
+}
+
+#headline {
+  font-family: Mr Dafoe;
+  color: white;
+  font-size: 6rem;
+  font-weight: lighter;
+  -webkit-transform:scale(1.2,1); /* Safari and Chrome */
+  -moz-transform:scale(1.2,1); /* Firefox */
+  -ms-transform:scale(1.2,1); /* IE 9 */
+  -o-transform:scale(1.2,1); /* Opera */
+  transform:scale(1.2,1); /* W3C */
+  margin: 3rem;
+  margin-right: 7rem;
+}
+
+#face {
+  border-radius: 50%;
+  width: 450px;
+  height: auto;
+  box-shadow: 0 0 2rem -10px;
+}
+
+/* Main */
+main {
+  background-color: #E9E9E9;
+  box-shadow: 0 0 2rem -10px;
+  color: #292929;
+  padding: 1rem 4rem 2rem 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#about-headline {
+  text-shadow: 9px 12px #BCBCBC;
+  font-size: 4rem;
+  font-weight: 400;
+  margin: 2rem 0rem 2rem 4rem;
+  text-align: center;
+}
+
+hr {
+  width: 100%;
+  height: 0.4rem;
+  background-color: #292929;
+  border: none;
+}
+
+#about-text {
+  width: 80%;
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+/* "Find Out More" Button */
+button {
+  font-family: Cantata One;
+  background-color: white;
+  border: none;
+  border-radius: 45px;
+  padding: 0.4rem 1.4rem;
+  text-align: center;
+  display: block;
+  font-size: 2rem;
+  box-shadow: 0 0 2rem -15px black;
+  margin: auto;
+  margin-top: -1.65rem;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+button:hover  {
+  box-shadow: 0 0 2rem -5px black
+}
+
+button a {
+  text-decoration: none;
+  color: #292929;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  height: 160px;
+  padding: 1rem;
+}
+
+#icons {
+ margin-bottom: 2rem;
+
+}
+
+.icon {
+  margin: 1rem;
+  text-decoration: none;
+  fill: white;
+}
+
+/* Animations */
+@keyframes mainAnimation{
+    0%{
+        transform: rotate(0) translateX(100%);
+        }
+    100%{
+        transform: rotate(0);
+        }
+}
+
+main, #more{
+    animation: mainAnimation 1.2s 1 0s ease-in-out;
+}
+
+@keyframes headerAnimation{
+
+    0%{
+        transform: rotate(0) translateX(-100%);
+        }
+    100%{
+        transform: rotate(0);
+        }
+}
+
+header{
+    animation: headerAnimation 1.2s 1 0s ease-in-out;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1687px) {
+  #headline {
+    font-size: 5rem;
+  }
+  #face {
+    width: 400px;
+  }
+  main {
+    padding: 0;
+    padding-top: 1rem;
+    flex-flow: column-reverse;
+    align-items: center;
+  }
+  #about-headline {
+    text-shadow: 4px 9px #BCBCBC;
+    margin: 1rem;
+    margin-bottom: 0;
+  }
+
+  hr {
+    width: 100%;
+
+  }
+
+  #about-text {
+    text-align: center;
+    margin: 1rem;
+    margin-top: 0;
+  }
+
+}
+
+
+@media screen and (max-width: 1522px) {
+  #headline {
+    font-size: 4rem;
+  }
+  #face {
+    width: 350px;
+  }
+}
+
+@media screen and (max-width: 1408px) {
+  #headline {
+    font-size: 3.5rem;
+  }
+}
+
+
+@media screen and (max-width: 1350px) {
+  nav {
+    display: none;
+  }
+
+  #nav-container {
+    padding-top: 1rem;
+  }
+
+  .nav-show {
+    display: block;
+    margin: 0;
+  }
+
+  header {
+    flex-flow: column-reverse;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0 1.5rem 0;
+  }
+
+  .name {
+    font-family: Mr Dafoe;
+    font-size: 1.5rem;
+  }
+
+  #face {
+    width: 15rem;
+    margin: 0;
+  }
+
+  #headline {
+    display: none;
+  }
+
+  #about-headline {
+    text-shadow: 2px 4px #BCBCBC;
+    margin: 1rem;
+    margin-bottom: 0;
+  }
+
+  hr {
+    width: 100%;
+
+  }
+
+  #about-text {
+    text-align: center;
+    margin: 1rem;
+    margin-top: 0;
+  }
+
+  button {
+    font-size: 1.4rem;
+    margin-top: -1.3rem;
+  }
+}
+
+
+
+@media screen and (max-width: 800px) {
+  html, body {
+    font-size: 19px;
+  }
+  #nav-container {
+    padding: 0.5rem 1rem 0 1rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #about-headline {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #about-headline {
+    font-size: 2rem;
+  }
+}
+
+
+@media screen and (max-width: 350px) {
+  #about-headline {
+    font-size: 1.8rem;
+  }
+}
