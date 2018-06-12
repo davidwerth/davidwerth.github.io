@@ -19,6 +19,8 @@ html {
 
 /* Navigation */
 #nav-container {
+  background-color: rgba(233, 233, 233, 0.04);
+  /* box-shadow: 0 0 2rem -19px black; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -78,7 +80,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 7rem 2rem 7rem;
+  padding: 1.5rem 7rem 1.5rem 7rem;
 }
 
 #headline {
@@ -210,7 +212,7 @@ header{
 }
 
 /* Media Queries */
-@media screen and (max-width: 1687px) {
+@media screen and (max-width: 1700px) {
   #headline {
     font-size: 5rem;
   }
@@ -265,7 +267,8 @@ header{
   }
 
   #nav-container {
-    padding-top: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .nav-show {
@@ -277,7 +280,7 @@ header{
     flex-flow: column-reverse;
     justify-content: center;
     align-items: center;
-    padding: 1rem 0 1.5rem 0;
+    padding: 1rem 0 1rem 0;
   }
 
   .name {
@@ -324,7 +327,7 @@ header{
     font-size: 19px;
   }
   #nav-container {
-    padding: 0.5rem 1rem 0 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
   }
 }
 
